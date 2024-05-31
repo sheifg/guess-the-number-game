@@ -1,10 +1,10 @@
 ## **Guess the number**
 
-### **Project Description:**
+### *Project Description:*
 
 The task of this project is to create a guess the number game (between 1 to 100).
 
-## **Problem Statement:**
+### *Problem Statement:*
 - Each time the application is opened, it will keep a random number between 1-100 in the background.
 - The user makes a guess.
 - The number is compared and guided up/down until the user guess the correct number.
