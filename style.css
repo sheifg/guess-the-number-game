@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  color: rgba(22, 8, 8, 0.884);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+.bg {
+  animation: slide 4s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #0c9cac 50%, #eafdad 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 5s;
+}
+
+.bg3 {
+  animation-duration: 6s;
+}
+
+.hero {
+  background-color: rgba(238, 210, 54, 0.8);
+  position: fixed;
+  /* To place the game in the center */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  padding-bottom: 1.5rem;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  padding-bottom: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#guess-number {
+  height: 3rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1rem;
+}
+
+#btn-guess,
+#btn-reload {
+  padding: 0.9rem;
+  border: none;
+  font-weight: bolder;
+  border-radius: 1.8rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+#btn-guess:hover,
+#btn-reload:hover {
+  transform: scale(110%);
+}
+#btn-guess {
+  background-color: #4b8b92;
+  color: #fff;
+}
+
+#btn-reload {
+  background-color: rgb(213, 226, 238);
+  color: #4b8b92;
+  margin-bottom: 2rem;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
+
+
