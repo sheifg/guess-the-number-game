@@ -17,21 +17,25 @@ btnReload.onclick = function () {
 };
 
 button.addEventListener("click", () => {
-  const userNumber = document.getElementById("guess-number").value;
+  const userNumber = document.getElementById("guess-number");
+  const userNumberValue = userNumber.value;
   const result = document.getElementById("result");
   const rangeMax = document.getElementById("range-max");
   const rangeMin = document.getElementById("range-min");
-  if (userNumber === "") {
+  if (userNumberValue === "") {
     alert("Please enter a value");
   }
   if (totalAttemps > 0) {
-    if (userNumber > 1 && userNumber < 101) {
-      if (userNumber < randomNumber) {
+    if (userNumberValue > 1 && userNumberValue < 101) {
+      if (userNumberValue < randomNumber) {
         result.textContent = "Go higher!";
-        rangeMin.textContent = userNumber;
-      } else if (userNumber > randomNumber) {
+        console.log(userNumber);
+        userNumber.value = "";
+        rangeMin.textContent = userNumberValue;
+      } else if (userNumberValue > randomNumber) {
         result.textContent = "Go lower!";
-        rangeMax.textContent = userNumber;
+        userNumber.value = "";
+        rangeMax.textContent = userNumberValue;
       } else {
         result.textContent = "You are the winner!";
       }
