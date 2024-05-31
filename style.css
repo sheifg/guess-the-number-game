@@ -111,4 +111,25 @@ p {
   }
 }
 
+@media (max-width: 650px) {
+  .hero h1 {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
 
+  .hero p {
+    font-size: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  #guess-number {
+    height: 1.8rem;
+  }
+
+  #btn-guess,
+  #btn-reload {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
