@@ -22,14 +22,10 @@ button.addEventListener("click", () => {
   const result = document.getElementById("result");
   const rangeMax = document.getElementById("range-max");
   const rangeMin = document.getElementById("range-min");
-  if (userNumberValue === "") {
-    alert("Please enter a value");
-  }
   if (totalAttemps > 0) {
-    if (userNumberValue > 1 && userNumberValue < 101) {
+    if (userNumberValue > 0 && userNumberValue < 101) {
       if (userNumberValue < randomNumber) {
         result.textContent = "Go higher!";
-        console.log(userNumber);
         userNumber.value = "";
         rangeMin.textContent = userNumberValue;
       } else if (userNumberValue > randomNumber) {
@@ -37,6 +33,7 @@ button.addEventListener("click", () => {
         userNumber.value = "";
         rangeMax.textContent = userNumberValue;
       } else {
+        btnReload.style.display = "block";
         result.textContent = "You are the winner!";
       }
 
@@ -47,8 +44,11 @@ button.addEventListener("click", () => {
         btnReload.style.display = "block";
         result.textContent = "Game over!";
       }
+    } else if (userNumberValue === "") {
+      alert("Please enter a value");
     } else {
       alert("Please enter a number between 1 and 100");
+      userNumber.value = "";
     }
   }
 });
