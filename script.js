@@ -48,8 +48,16 @@ btnGuess.addEventListener("click", () => {
     }
   }
   if (totalAttemps === 0) {
-    randomValue.textContent = `The number was ${randomNumber}.`;
-    btnReload.style.display = "block";
-    result.textContent = "Game over!";
+    // console.log(typeof userNumberValue);
+    // console.log(typeof randomNumber);
+    if (userNumberValue == randomNumber) {
+      btnReload.style.display = "block";
+      btnGuess.disabled = true;
+      result.textContent = "You are the winner!";
+    } else {
+      randomValue.textContent = `The number was ${randomNumber}.`;
+      btnReload.style.display = "block";
+      result.textContent = "Game over!";
+    }
   }
 });
