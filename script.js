@@ -37,13 +37,13 @@ button.addEventListener("click", () => {
         result.textContent = "You are the winner!";
       }
 
-      totalAttemps--;
-      totalAtt.textContent = totalAttemps;
       if (totalAttemps === 0) {
         randomValue.textContent = `The number was ${randomNumber}.`;
         btnReload.style.display = "block";
         result.textContent = "Game over!";
       }
+      totalAttemps--;
+      totalAtt.textContent = totalAttemps;
     } else if (userNumberValue === "") {
       alert("Please enter a value");
     } else {
