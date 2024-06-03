@@ -1,5 +1,5 @@
 const randomNumber = Math.ceil(Math.random() * 100);
-console.log(randomNumber);
+// console.log(randomNumber);
 
 const randomValue = document.getElementById("random-number");
 
